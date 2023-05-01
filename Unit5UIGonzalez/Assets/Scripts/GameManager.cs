@@ -29,10 +29,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        //Check if the user has pressed the P key
+        if (Input.GetKeyDown(KeyCode.P))
         {
             ChangePaused();
         }
+
     }
 
     IEnumerator SpawnTarget()
@@ -80,8 +82,8 @@ public class GameManager : MonoBehaviour
         if (!paused)
         {
             paused = true;
-            pauseScreen.SetActive(false);
-            Time.timeScale = 1;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
@@ -89,8 +91,8 @@ public class GameManager : MonoBehaviour
             pauseScreen.SetActive(false);
             Time.timeScale = 1;
         }
-
     }
+
 
     public void UpdateLives(int livesToChange)
     {
