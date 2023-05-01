@@ -52,7 +52,7 @@ public class TargetX : MonoBehaviour
     // Generates random square index from 0 to 3, which determines which square the target will appear in
     int RandomSquareIndex ()
     {
-        return Random.Range(0, 2);
+        return Random.Range(0, 4);
     }
 
 
